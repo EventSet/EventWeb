@@ -8,11 +8,17 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import {environment} from '../environments/environment';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

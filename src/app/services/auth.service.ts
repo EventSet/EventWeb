@@ -1,6 +1,7 @@
 import { Credential } from './../../models/credentials/credentials';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase';
 
 @Injectable()
 export class AuthService {
@@ -16,6 +17,10 @@ export class AuthService {
 
   logout() {
     return this.afAuth.auth.signOut();
+  }
+
+  getCurrentUser() {
+    return firebase.auth().currentUser;
   }
 
 }
